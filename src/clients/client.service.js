@@ -1,12 +1,15 @@
 import axios from 'axios';
 
-let isJsonServer  = true;
+let isJsonServer  = false;
 
 //using json-server based on src/json/clients.json file
 //start: json-server --watch src\json\clients.json --port 3001
 const CLIENT_API_BASE_URL = "http://localhost:3001/api/clients";
 //Spring Boot Api
 //const CLIENT_API_BASE_URL = "http://localhost:8090/clients";
+//Flask API on Heroku
+const CLIENT_API_BASE_URL = "https://young-meadow-54300.herokuapp.com/clients"
+
 
 
 class ClientService {
