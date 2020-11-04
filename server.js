@@ -1,7 +1,7 @@
 //module definitions for express app
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 // create express app
 const app = express();
 
@@ -11,7 +11,7 @@ const server = jsonServer.create();
 // Returns an Express router
 const router = jsonServer.router('./src/json/clients.json');
 //const middlewares = jsonServer.defaults({ noCors: false });
-const portApi = process.env.PORT || '3001';
+const portApi = process.env.PORT || '8081';
 
 //APP settings
 // Serve only the static files form the build directory
@@ -34,7 +34,7 @@ app.listen(port, () => {
 //server.use(middlewares);
 server.use(jsonServer.defaults());
 server.use(router);
-// server.listen(portApi,() => {
-//   console.log(`Running json-server(API) on localhost:${portApi}`);
-// });
+server.listen(portApi,() => {
+  console.log(`Running json-server(API) on localhost:${portApi}`);
+});
 //settings for json server as REST API end
