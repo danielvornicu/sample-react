@@ -32,11 +32,11 @@ app.listen(port, () => {
 //APP settings end
 
 //settings for json server as REST API
-router.use('/api', mainRoute);
+//router.use('/api', mainRoute);
 // Set default middlewares (logger, static, cors and no-cache)
-server.use(middlewares);
-server.use(router);
-server.listen(portApi,() => {
-  console.log(`Running json-server(API) on localhost:${portApi}`);
-});
+// server.use(middlewares);
+// server.use(router);
+// server.listen(portApi,() => {
+//   console.log(`Running json-server(API) on localhost:${portApi}`);
+// });
 //settings for json server as REST API end
