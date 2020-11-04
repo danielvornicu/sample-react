@@ -1,17 +1,14 @@
 //json server as REST API
-const express = require('express');
 const jsonServer = require('json-server');
 const server = jsonServer.create(); 
-// Returns an Express router
-const router = express.Router();
-const mainRoute  = jsonServer.router('./src/json/clients.json');
+const router  = jsonServer.router('./src/json/clients.json');
 //const middlewares = jsonServer.defaults({ noCors: false });
 const middlewares = jsonServer.defaults();
 const portApi = process.env.PORT || '3001';
 
 
 //settings for json server as REST API
-router.use('/api', mainRoute);
+server.use('/api', router);
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
 server.use(router);
