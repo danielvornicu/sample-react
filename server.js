@@ -11,7 +11,7 @@ const server = jsonServer.create();
 // Returns an Express router
 const router = jsonServer.router('./src/json/clients.json');
 //const middlewares = jsonServer.defaults({ noCors: false });
-const portApi = process.env.PORT || '3001';
+const portApi = process.env.PORT || '4000';
 
 //APP settings
 // Serve only the static files form the build directory
