@@ -27,7 +27,7 @@ app.get('/*', function (req, res) {
 
 // Start the app by listening on desired port(ex: Default Heroku port 8080)
 app.listen(port, () => {
-  console.log(`Running server(HTTP) on localhost:${port}`);
+  console.log(`Running server(HTTP) on port :${port}`);
 });
 //APP settings end
 
