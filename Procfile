@@ -1,2 +1,1 @@
-web: node server.js 
-api: node serverJson.js
+web: node server.js & node serverJson.js
