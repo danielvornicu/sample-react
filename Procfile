@@ -1,1 +1,2 @@
-web: node server.js & node serverJson.js wait -n
+web: node server.js 
+api: node serverJson.js
