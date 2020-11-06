@@ -73,21 +73,53 @@ http://localhost:3000/clients/1/delete           HTTP GET or HTTP DELETE for Jso
 
 http://localhost:3000/welcome - test page
 
-Github:
+Using Concurrently with json-server and your React App
+During the development of a React app, you will be running 'npm start' more times.
+If you are working with json-server we run 'json-server --watch db.json' in one terminal then npm start in another terminal.
+Install: npm i -S concurrently
+In the scripts section of our 'package.json' file, we’ll insert:
+"json-server": "json-server --watch src/json/clients.json --port 3001"
+and
+"dev": "concurrently \"npm start\" \"npm run json-server\""
+We combined npm start and the json-server command into “dev” command:
+Run: npm run dev
+You’ll see that your json-server is running on localhost:3001, and your react app will open automatically.
 
+Using Express:
+Create a server.js file(server http + json-server that use a json file). I use the default React port 8090(http) and 3001(json-server)
+I made a serverJson.js to open the json-server separatelly with: node serverJson.js, test to: http://localhost:3001/clients
+For dev server: npm start then http://localhost:3000/clients
+For production: npm run build
+node server.js then go to: http://localhost:8090/clients
+We can use a proxy in package.json
+Ex: "proxy": "http://localhost:8090"
+
+Optional using serve package(default port 5000):
+npm install -g serve / npm uninstall -g serve 
+serve -s build
+http://localhost:5000/clients
+
+Github:
+git add src/*
+git add public/*
+git add readme.txt
+git commit -m "first commit"
+Connect it to github ad create a new repository: sample-react
+git remote add origin https://github.com/danielvornicu/sample-react.git
+git push -u origin master
 
 Deploy Sample-react application on Heroku with Heroku CLI:
 1.First of all, we need a server for our application and what we are going to use is the Express server.
-Locally we run ng serve from terminal to run our app on local browser.
+Locally we run 'node server.js' from terminal to run our app on local browser.
 Install il with:
-   npm install express --save
+   npm install express --save / npm i express -S
 2. Now we need a script in JS to tell Express what to do, I like to call it server.js (in your project’s root directory)
 Test That Everything is OK:
->ng build  - build and create dist folder
+>npm run build  - build and create dist folder
 >node server.js -lance the app
 3.Change start command
 In package.json, change the “start” command to node server.js so:
-   "start": "ng serve -o"  becomes:  "start": "node server.js"
+   "start": "react-scripts start"  becomes:  "start": "node server.js"
 We can add also Node and NPM engines that Heroku will use to run your application. 
 Preferably, it should be same version you have on your machine.
 So, run node -v and npm -v to get the correct version and include it in your package.json file like so:
@@ -95,5 +127,15 @@ So, run node -v and npm -v to get the correct version and include it in your pac
     "node": "12.13.0",
     "npm": "6.12.0"
   }
+  
+Procfile
+web: node server.js
+api: node serverJson.js
+
+heroku ps:scale web=1 api=1
+
+
+
+  
 
 

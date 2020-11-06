@@ -11,7 +11,7 @@ const portApi = process.env.PORT || '3001';
 
 
 //settings for json server as REST API
-router.use('/api', mainRoute);
+router.use('/', mainRoute);
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
 server.use(router);

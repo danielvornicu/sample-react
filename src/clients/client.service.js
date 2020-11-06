@@ -4,13 +4,11 @@ let isJsonServer  = true;
 
 //using json-server based on src/json/clients.json file
 //start: json-server --watch src\json\clients.json --port 3001
-const CLIENT_API_BASE_URL = "http://localhost:3001/api/clients";
+const CLIENT_API_BASE_URL = "http://localhost:3001/clients";
 //Spring Boot Api
 //const CLIENT_API_BASE_URL = "http://localhost:8090/clients";
 //Flask API on Heroku
-//const CLIENT_API_BASE_URL = "https://young-meadow-54300.herokuapp.com/clients";
-
-
+//const CLIENT_API_BASE_URL = "https://floating-river-31233.herokuapp.com/clients";
 
 class ClientService {
 
