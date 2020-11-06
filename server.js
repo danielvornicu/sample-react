@@ -32,7 +32,7 @@ app.listen(port, () => {
 //APP settings end
 
 //settings for json server as REST API
-//router.use('/api', mainRoute);
+//router.use('/', mainRoute);
 // Set default middlewares (logger, static, cors and no-cache)
 // server.use(middlewares);
 // server.use(router);

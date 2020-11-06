@@ -85,7 +85,8 @@ We combined npm start and the json-server command into “dev” command:
 Run: npm run dev
 You’ll see that your json-server is running on localhost:3001, and your react app will open automatically.
 
-Using Express:
+Using Express(a server for our application, we need a script in JS to tell Express what to do, we call it script.js)
+Install Express: npm i express -S
 Create a server.js file(server http + json-server that use a json file). I use the default React port 8090(http) and 3001(json-server)
 I made a serverJson.js to open the json-server separatelly with: node serverJson.js, test to: http://localhost:3001/clients
 For dev server: npm start then http://localhost:3000/clients
@@ -108,18 +109,19 @@ Connect it to github ad create a new repository: sample-react
 git remote add origin https://github.com/danielvornicu/sample-react.git
 git push -u origin master
 
-Deploy Sample-react application on Heroku with Heroku CLI:
+Deploy Sample-react application on Heroku:
 1.First of all, we need a server for our application and what we are going to use is the Express server.
 Locally we run 'node server.js' from terminal to run our app on local browser.
 Install il with:
    npm install express --save / npm i express -S
 2. Now we need a script in JS to tell Express what to do, I like to call it server.js (in your project’s root directory)
 Test That Everything is OK:
->npm run build  - build and create dist folder
+>npm run build  -build and create dist folder
 >node server.js -lance the app
 3.Change start command
 In package.json, change the “start” command to node server.js so:
    "start": "react-scripts start"  becomes:  "start": "node server.js"
+We also can create a Procfile with: web: node server.js and leave "start": "react-scripts start" 
 We can add also Node and NPM engines that Heroku will use to run your application. 
 Preferably, it should be same version you have on your machine.
 So, run node -v and npm -v to get the correct version and include it in your package.json file like so:
