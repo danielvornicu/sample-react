@@ -15,7 +15,7 @@ Install dependencies: bootstrap, font-awesome
 >npm install bootstrap font-awesome --save
 For our API calls(Spring Boot API), we will be using Axios. Others options are: Axios,Fetch,Superagent,React-axios,Use-http,React-request
 Below is the npm command to install Axios
->npm add axios
+>npm install axios
 For a fake Json server based on json file we can install json-server
 >npm install json-server
 Start JSON Server with json file as input:
