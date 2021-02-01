@@ -111,10 +111,22 @@ Connect it to github ad create a new repository: sample-react
 git remote add origin https://github.com/danielvornicu/sample-react.git
 git push -u origin master
 
-Branch sample-react-hooks-context:
+Branch sample-react-hooks-context:s
 git branch sample-react-hooks-context 
 git checkout sample-react-hooks-context
 git push --set-upstream origin sample-react-hooks-context
+
+Modifications: App.js: add ClientContextProvider
+>npm install react-hook-form
+We can install othets deps: bootstrap, reactstrap, uuid if we want
+Add 'contexts' directory: ClientContext.js
+Add 'reducers' directory and ClientReducer.js
+src\clients\ add: client-liste.funct.component.jsx, client-consult.funct.component.jsx, client-fiche.funct.component.jsx that
+uses ClientContext(and not ClientService)
+
+VSC Extension: ES7 React/Redux/GraphQL
+>rafc _shortcut to create a functional component template
+
 
 Deploy Sample-react application on Heroku:
 1.First of all, we need a server for our application and what we are going to use is the Express server.

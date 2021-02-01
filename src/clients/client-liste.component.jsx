@@ -37,7 +37,7 @@ class ClientListeComponent extends Component {
 
     componentDidMount(){
         ClientService.findAll().then((res) => {
-            //console.log(res.data);
+            console.log(res.data);
             this.setState({ clients: res.data});
         });
     }

@@ -14,8 +14,9 @@
   },
  "clients" : {
    "react" : {
-    "titre" : "Liste des Clients (version ReactJS)"
-   }
+    "titre" : "Liste des Clients (version React Hooks)"
+   },
+   "listeVide" : "La liste des clients est vide."
   }
  },
 "fiche" : {
