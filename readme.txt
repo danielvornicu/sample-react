@@ -170,7 +170,8 @@ Deploy Sample-react application on GitHub Pages:
 >npm run deploy
 This command will create a branch named gh-pages at your GitHub repository
 Go to {your-GitHub-code-repository} -> settings -> GitHub pages section and setup source to the gh-pages branch
-5. Go to: https://danielvornicu.github.io/sample-react/
+5. Go to: https://danielvornicu.github.io/sample-react/ then click to header 'Liste des Clients (version React Hooks)' to redirect to
+https://danielvornicu.github.io/clients
 
 
 
