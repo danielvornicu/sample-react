@@ -173,6 +173,31 @@ Go to {your-GitHub-code-repository} -> settings -> GitHub pages section and setu
 5. Go to: https://danielvornicu.github.io/sample-react/ then click to header 'Liste des Clients (version React Hooks)' to redirect to
 https://danielvornicu.github.io/clients
 
+Deploy 'Sample-react' application on Surge:
+1.install Surge globally:
+>npm install --global surge
+Remove "homepage" attribute from package.json if exists(used for deploy to Github Pages):
+ "homepage": "https://danielvornicu.github.io/sample-react/",
+2.Build your project using npm run build:
+>npm run build
+3.Now, run surge from within any directory, to publish that directory onto the web.
+>cd build
+Set a certificate if necessary:
+>set NODE_EXTRA_CA_CERTS=d:\python\examples\heroku\ANFH-CA.cer
+5. Execute surge command:
+>surge enter email and password and domain: sample-crud-react.surge.sh
+Go to generated domain: http://sample-crud-react.surge.sh
+
+Shorthand usage:
+  surge [project path] [domain]
+
+Additional commands:
+  surge whoami        show who you are logged in as
+  surge logout        expire local token
+  surge login         only performs authentication step
+  surge list          list all domains you have access to
+  surge teardown      tear down a published project
+
 
 
   
