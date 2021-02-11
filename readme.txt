@@ -155,6 +155,23 @@ api: node serverJson.js
 
 heroku ps:scale web=1 api=1
 
+Deploy Sample-react application on GitHub Pages:
+1. Install the gh-pages package as a “dev-dependency” of the app.
+>npm install gh-pages —-save-dev
+2.Add homepage property to package.json file
+"homepage": "https://danielvornicu.github.io/sample-react/"
+3.Deploy scripts under package.json file
+"scripts": {
+  //...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+4.Now deploy it to GitHub Pages
+>npm run deploy
+This command will create a branch named gh-pages at your GitHub repository
+Go to {your-GitHub-code-repository} -> settings -> GitHub pages section and setup source to the gh-pages branch
+5. Go to: https://danielvornicu.github.io/sample-react/
+
 
 
   
