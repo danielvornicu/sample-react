@@ -8,7 +8,9 @@ let isJsonServer  = false;
 //Spring Boot Api
 //const CLIENT_API_BASE_URL = "http://localhost:8090/clients";
 //SpringBoot API on Heroku
-const CLIENT_API_BASE_URL = "https://sample-crud-springboot.herokuapp.com/clients";
+//const CLIENT_API_BASE_URL = "https://sample-crud-springboot.herokuapp.com/clients";
+//SpringBoot API on Render
+const CLIENT_API_BASE_URL = "https://sample-crud-springboot.onrender.com/clients";
 
 class ClientService {
 
