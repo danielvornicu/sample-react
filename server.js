@@ -17,8 +17,8 @@ const portApi = process.env.PORT || '3001';
 
 //APP settings
 // Serve only the static files form the build directory
-app.use(express.static(path.join(__dirname, 'build')));
-//app.use(express.static('build'));
+//app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static('build'));
 
 //Wait for a request to any path and redirect all of the requests to index.html
 app.get('/*', function (req, res) {
