@@ -1,16 +1,16 @@
 import axios from 'axios';
 
-let isJsonServer  = false;
+let isJsonServer  = true;
 
 //using json-server based on src/json/clients.json file
 //start: json-server --watch src\json\clients.json --port 3001
-//const CLIENT_API_BASE_URL = "http://localhost:3001/clients";
+const CLIENT_API_BASE_URL = "http://localhost:3001/clients";
 //Spring Boot Api
 //const CLIENT_API_BASE_URL = "http://localhost:8090/clients";
 //SpringBoot API on Heroku
 //const CLIENT_API_BASE_URL = "https://sample-crud-springboot.herokuapp.com/clients";
 //SpringBoot API on Render
-const CLIENT_API_BASE_URL = "https://sample-crud-springboot.onrender.com/clients";
+//const CLIENT_API_BASE_URL = "https://sample-crud-springboot.onrender.com/clients";
 
 
 class ClientService {
